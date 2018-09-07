@@ -10,7 +10,5 @@ export default function Contact(props){
         </img>
         <h2 className="contact-name"></h2>
         <div className="contact-address"></div>
-
-        
     );
 };
