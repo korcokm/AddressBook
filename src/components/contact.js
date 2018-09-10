@@ -5,10 +5,10 @@ import './contact.css';
 export default function Contact(props){
     return 
     (
-        <img className="contact=photo">
-
-        </img>
-        <h2 className="contact-name"></h2>
-        <div className="contact-address"></div>
+        <section id={'contact-${props.index}'} className="contact">
+            <img className="contact=photo" src={props.photo} alt={'${props.name} avatar'} />
+            <h2 className="contact-name">{props.name}</h2>
+            <div className="contact-address">{props.address}</div>
+        </section>
     );
 };
