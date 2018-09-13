@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Contact from './contact';
+import Contact from './contact.js';
 
 
-export default class AdressBook extends React.Component {
+export class AddressBook extends React.Component {
     constructor(props) {
         super(props);
         this.state = {            
@@ -24,9 +24,10 @@ export default class AdressBook extends React.Component {
     }
 
     render() {
-        const contacts = this.state.contacts.map((contact, index) =>
-            <Contact key={index} index={index} {...contact} />
+        const contacts = this.state.contacts.map((contact, index) => 
+         <Contact key={index} index={index} {...contact} />
         );
+
         return (
             <div className="address-book">
                 {contacts}
@@ -35,6 +36,4 @@ export default class AdressBook extends React.Component {
     }
 }
 
-List.defaultProps = {
-    title: ''
-};
+export default AddressBook;
